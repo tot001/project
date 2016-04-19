@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Learn JS</title>
+	<style type="text/css">
+		body{
+			color: #5F595B;
+		}
+		.bu_gb {
+			width: 100px;
+		}
+		button {
+			width: 55px;
+			margin: 10px 0 20px 0;
+			background-color:#F88E8B;
+			color: #fff;
+			border: 1px solid #F88E8B;
+		}
+		button:hover{
+			background-color: #F45551;
+		}
+		input{
+			margin: 10px 0 10px 0;
+		}
+		#n18_1{
+			width: 60px;
+		}
+		a{
+			text-decoration: none;
+			color: #5F595B;
+		}
+		h3	 {
+			color: #AB79BB;	
+		}
+		p{
+			color: #5F595B;
+		}
+		.n20{
+			width: 180px;
+			height: 40px;
+			padding-top: 20px; 
+			text-align: center;
+			background-color: #AE8CEC;
+			border:1px solid;
+			border-color: #ccc #ccc #ccc #ccc;
+		}
+		.n20:hover
+		{
+			background-color: #7340D0;
+			color:#000000;
+		}
+		#n20_2{
+			display: none;
+			float: right;
+			padding-top: 20px;
+			margin-right:1000px; 
+			width: 180px;
+			height: 40px;
+			background-color: #AE8CEC;
+			text-align: center;
+			border:1px solid;
+			border-color: #ccc #ccc #ccc #ccc; 
+		}
+	</style>
+	<script>
+	function getTest()
+	{
+		alert(document.getElementById("insert1").innerHTML);
+	}
+	</script>
+</head>
+<body>
+
+	 <h3>Note1</h3>
+	 <a href="#" id="insert1"><b>A标签中的inner</b></a>
+	 <input type="button" onclick="getTest()" value="提取HTML的参数">
+	 <br>
+
+	 <h3>Note2</h3>
+	 <p id="test1">123test</p>	 
+	<button  onclick="document.getElementById('field2').value=document.getElementById('field1').value">Click</button>
+
+	<button onclick="document.getElementById('field2').value=document.getElementById('test1').innerHTML ">123test</button> 
+	 <!--innerHTML属性设置或返回表格行的开始和结束标签之间的 HTML。-->
+	<br>
+	Field:<input type="text" id="field1" value="Hello! Copy This" >
+	Copy:<input type="text" id="field2"  >
+	<br>
+
+	<h3>Note3</h3>
+	 <button type="button" onclick="alert('Welcome!')">Alert</button>
+	
+	<h3>Note4</h3>
+		<p id="hinner1">javascrip 能改变 HTML 内容</p>
+		<script>
+		function Myclick(){
+		var	x=document.getElementById("hinner1").innerHTML
+			if (x=="javascrip 能改变 HTML 内容") 
+				{
+				document.getElementById("hinner1").innerHTML="再点击就还原";
+				}
+				else if (x=="再点击就还原")
+				{
+				document.getElementById("hinner1").innerHTML="javascrip 能改变 HTML 内容";
+				};
+		}
+		// function Reduction(){
+		// 	y=document.getElementById("hinner1")
+		// 	y.innerHTML="javascrip 能改变 HTML 内容"
+		// }
+		// innerHTML
+		</script>
+		<button type="button" onclick="Myclick()" class="bu_gb">改变还原</button>
+		<!-- <button type="button" onclick="Reduction()" class="bu_gb">点击还原</button> -->
+
+
+		<h3>Note5</h3>
+		<p id="hinner2" style="color:red;">javascrip 能改变 HTML 样式</p>
+		
+		<script>
+		var N5=document.getElementById('hinner2');
+			function MyNote5()
+			{
+				if (N5.style.color=='red')
+				 {
+				 	N5.style.color='#673AB7';
+				 }
+				 else
+				 {
+				 	N5.style.color='red';
+
+				 };
+				 document.getElementById('hinner2').innerHTML;
+			};
+
+		 // function Mychange()
+			//  {
+
+		 // 	 element=document.getElementById("hinner2").style
+		 // 	 if (element="#F44336") 
+		 // 	 	{
+		 // 	 	document.getElementById("hinner2").style.color="blue";
+		 	 	
+		 // 	 	}
+		 	 
+		 		
+		 // 	 // element.style.color="#F44336";
+		 	  
+		 	 
+			//  }
+		</script>
+		<button type="button" onclick="MyNote5()" class="bu_gb">改变颜色</button>
+
+		<h3>Note6</h3>
+		<ul>
+			<li>JavaScript 代码（或者只有 JavaScript）是 JavaScript 语句的序列。</li>
+			<li>浏览器会按照编写顺序来执行每条语句。</li>		
+		</ul>
+		<ol>
+			<li><p id="demo">先执行</p></li>
+			<li><div id="myDIV">后执行</div></li>
+<!-- 			如果demo和myDIV位置对换，就会发生变化 -->
+ 		</ol>
+		<script>	
+		document.getElementById("myDIV").innerHTML="How are you?";
+		document.getElementById("demo").innerHTML="Hello World";
+		</script>
+
+		<br>
+
+		<h3>Note7</h3>
+		<ul>
+			<li>JavaScript 语句通过代码块的形式进行组合。</li>
+			<li>块由左花括号开始，由右花括号结束。</li>
+			<li>块的作用是使语句序列一起执行。</li>
+		</ul>
+		<ol>
+			<li><p id="demo2">Together执行</p></li>
+			<li><div id="myDIV2">Together执行</div></li>
+		</ol>
+
+		<script>
+		function MyNote7()
+		{			
+		document.getElementById('demo2').innerHTML="Hello World!"
+		document.getElementById('myDIV2').innerHTML="How are you!"
+		}
+		</script>
+		<button type="button" onclick="MyNote7()" class="bu_gb">Together</button>
+
+		<h3>Note8</h3>
+		<p>Javascript 数组</p>
+		<p>			
+		var cars=new Array();
+		<br>
+		cars[0]="Audi";
+		<br>
+		cars[1]="BMW";
+		<br>
+		cars[2]="Volvo"; 
+		</p>
+		<p>			
+		var cars=new Array("Audi","BMW","Volvo");
+		</p>
+
+		<script>
+			var cars= new Array("Audi","BMW","Volvo");
+			for (var i=0; i<cars.length;i++) 
+			{
+				document.write(i+'.'+cars[i]+"<br>");
+			}
+		</script>
+
+		<h3>Note9</h3>
+		<p>Javascript 对象</p>
+		<script>
+		 var person={fistname:"Bili",lastname:"bili",id:110};
+		// 对象有三个属性
+		 // 变量均为对象
+		document.write(person.fistname+'&'+person["lastname"]+" "+person.id);
+		</script>
+
+
+
+		<h3>Note10</h3>
+		<p id="Note10">Javascript 带参数的函数 </p>
+		<button class="bu_gb" onclick="MyNote10('Bili','CEO','background-color','#F88E8B')">Alert Bcolor</button>
+		<button class="bu_gb" onclick="MyNote10('asdf','qwer','height','50px')">Alert Height</button> 
+		<script>
+		function MyNote10(name,job,feature,parameter)
+		{
+		x = document.getElementById('Note10');
+		//第一种操作属性的方法
+		x.innerHTML ="Welcome  "+name+" the "+job;
+		//第二种操作属性的方法
+		x.style[feature]=parameter;
+		// x.innerHTML = x[innerHTML]
+
+		}
+		</script>
+
+
+
+		<h3>Note11</h3>
+		<p >Javascript 返回值的函数 </p>
+		<p id="Note11"></p>
+		<script>
+			function MyNote11(x,y)
+			{
+				return x*y;
+			}
+		document.getElementById('Note11').innerHTML=MyNote11(657,76);
+		</script>
+
+
+		<h3>Note14</h3>
+		<p >Javasript Switch</p>
+		<p id="note14"><b>请使用 break 来阻止代码自动地向下一个 case 运行。</b></p>
+		<button class="bu_gb" onclick="MyNote14()">GetDay</button>
+		<script>
+		function MyNote14()
+		{
+			var x;
+			var d=new Date().getDay();
+			switch(d) //case 会检测 var(变量)中【是否相同】 如果有就执行 
+			{
+			case 0://Sunday=0,Monday=1
+				x="Today it's Sunday";
+				break;
+			case 1:
+				x="Today it's Monday";
+				break;
+			case 2:
+				x="Today it's Tuesday";
+				break;
+			case 3:
+				x="Today it's Wednesday";
+				break;
+			case 4:
+				x="Today it's Thursday";
+				break;
+			case 5:
+				x="Today it's Friday";
+				break;
+			case 6:
+				x="Today it's Saturday";
+				break;
+			default:
+				x="Looking forward to the Weekend";
+				// 请使用 default 关键词来规定匹配不存在时做的事情：
+			}
+			document.getElementById('note14').innerHTML=x;
+		}
+		</script>
+
+
+		<h3>Note15</h3>
+		<p >Javasript For</p>
+		<p id="note15"></p>
+		<script>
+		cars=["HFANG","WHASK","ZHLHL","MTLL","BMW"];
+			for (var i = 0; i < cars.length; i++) //length 是cars的长度
+			 {
+				document.write(cars[i]+"<br>");
+			};
+
+
+
+			var x="";
+			for (var i = 0; i<5 ; i++) 
+			// 	for (语句 1; 语句 2; 语句 3)
+  	// 				{
+  	// 					被执行的代码块
+  	// 				}
+			// 语句 1 在循环（代码块）开始前执行
+			// 语句 2 定义运行循环（代码块）的条件
+			// 语句 3 在循环（代码块）已被执行之后执行
+			{
+				x +=  "The number is "+ i +"<br>";
+				// x = x+"The number is "+ i +"<br>"  等于上面 
+				// x=x 和 x += 的意思是, 将前一个值累加起来
+			};
+			document.getElementById('note15').innerHTML=x;
+
+		</script>
+		
+		<p><b>For...In</b></p>		
+		<script>
+		var person={fname:"Bill",lname:"bili",age:56};
+		var x="";
+		var  y;
+		for (y in person) //将person的属性 给 y
+		{
+			x=x+person[y]; //person[Bill+bili+56]
+		};
+		document.write(x)
+
+			// for...in 循环中的代码块将针对每个属性执行一次
+		</script>
+
+			
+
+		
+		<h3>Note16</h3>
+		<p >Javasript While </p>
+		<p id="note16_1"></p>
+		<button class="bu_gb" onclick="MyNote16()">Do While</button>	
+		<p id="note16_2"></p>	
+		<script>
+	
+		var x="",i=0;	
+			while (i<5)
+			{	
+				x=x+"The number is " + i +"<br>";
+				i++;
+			}
+			document.getElementById("note16_1").innerHTML=x;
+
+			function MyNote16()
+			{
+				var y="",i_1=0;
+				do 
+					{
+						y = y+"The while is "+ i_1 +"<br>";
+						i_1++;//如果不加i=0 就会一直输出到崩溃
+					}
+				while(i_1<5);
+					document.getElementById('note16_2').innerHTML=y;
+			}
+		</script>
+			
+
+
+		<h3>Note17</h3>
+		<p >Javasript Break And continue </p>
+		<button class="bu_gb" onclick="MyNote17()">Break</button>
+		<button class="bu_gb" onclick="MyNote17_2()">continue</button>
+		<p id="note17_1"></p>
+
+		<script>
+
+		function MyNote17()
+		{
+			var x="",i=0;
+
+			for (var i = 0; i < 10 ; i++) 
+			{
+				if (i==3) 
+				{
+					break ;
+				
+				}
+			x = x+"Before the "+i+" break"+"<br>";
+			};
+			document.getElementById('note17_1').innerHTML=x;
+		}
+		function MyNote17_2()
+		{
+			var y="",i=0;
+			for (var i = 0; i < 10; i++)
+			 {
+				if (i==3)
+				 {
+				 	continue;
+				 }
+				 y = y+"Before the "+i+" break"+"<br>";
+			};
+			document.getElementById('note17_1').innerHTML=y;
+		}
+		</script>
+
+
+
+
+		<h3>Note18</h3>
+		<p>javascript Error</p>
+		<ul>
+			<b>
+				<li>try 语句测试代码块的错误。</li>
+				<li>catch 语句处理错误。</li>
+				<li>throw 语句创建自定义错误。</li>
+			</b>
+			</ul>
+		<p>please input a number between 5 and 10 </p>
+		<input type="text" id="n18_1" maxlength="2">
+		<button  onclick="MyNote18()" >Input</button>
+		<p id="n18_2"></p>
+		<script>
+		function MyNote18()
+		{
+			var x=document.getElementById('n18_1').value;
+			try
+			{				
+			if (x=="") {throw "empty"};
+			if (isNaN(x)) {throw "not is number"};
+			if (x>10) {throw "too high"};
+			if (x<5) {throw "too low"};
+			}
+			catch (err) 
+			{
+				var y=document.getElementById('n18_2');
+				y.innerHTML="Error:"+err;
+			}
+		}
+		</script>
+ 		
+
+
+		<h3>Note19</h3>
+ 		<p>JavaScript 表单验证</p> 
+      <script type="text/javascript">  
+
+
+        function check(field)
+        {  
+            if (field.value==null||field.value=="")
+             {
+              return false;
+             }
+             else  
+             {
+              return true;
+             }
+
+        }  
+
+      function check_form(thisform)
+      {
+              with(thisform)
+                {
+                     if (check(uname,uname2,uname3)==false) 
+                        {
+                         
+
+                          uname.focus();
+                          uname.style.border="2px solid red";
+                          return false
+
+                          uname2.focus();
+                          uname2.style.border="2px solid red";
+                          return false
+
+                          uname3.focus();
+                          uname3.style.border="2px solid red";
+                          return false
+                        }  
+
+               }   
+      }
+
+      </script>  
+  </head>  
+  <body>  
+    <form id="myform" method="post" action="" onsubmit="return check_form(this)"> 
+        用户名:<input type="text" name="uname" > <br> 
+         用户名:<input type="text" name="uname2" > <br> 
+          用户名:<input type="text" name="uname3" > <br> 
+        <input type="submit" value="提交" >  
+    </form>  
+
+
+	
+			<h3>Note20</h3>
+			<ul>
+				<li>onchange 事件常结合对输入字段的验证来使用。</li>
+				<li>onmouseover 和 onmouseout 事件可用于在用户的鼠标移至 HTML 元素上方或移出元素时触发函数。</li>
+				<li>onmousedown, onmouseup 以及 onclick 构成了鼠标点击事件的所有部分。</li>
+				<ol>
+				<li>当点击鼠标按钮时，会触发 onmousedown事件 </li>
+				<li>当释放鼠标按钮时，会触发 onmouseup 事件.</li>
+				<li>最后，当完成鼠标点击时，会触发 onclick 事件.</li>
+				</ol>
+			</ul>
+
+			<p onclick="changtext(this)">点击就送垅纛</p>
+
+
+			<div class="n20" id="n20_1">Onmouse!</div>
+
+
+			<div id="n20_2"></div>
+			<button id="n20_3" style="width:100px;margin-top:90px;" >点击提示！</button>
+
+			<script>
+			//<p onclick="changtext(this)">点击就送垅纛</p>
+			function changtext(dome)
+			{
+				if (dome.innerHTML=="吃狗屎!")
+				{
+					dome.innerHTML="谢谢!";
+				}
+				else if (dome.innerHTML=="点击就送垅纛"+"!") 
+				{
+					dome.innerHTML="吃狗屎!";
+				}
+				else
+				{
+					dome.innerHTML=dome.innerHTML+"!";
+				}
+			}
+
+			//<div class="n20" id="n20_1">Onmouse!</div>
+			var n20=document.getElementById('n20_1');
+			n20.onmouseover=function()
+			{	
+				n20.innerHTML="Mouse Over!";
+			}
+			n20.onmouseout=function()
+			{
+				n20.innerHTML="Mouse Out!";
+			}
+
+
+			//<div id="n20_2"></div>
+			//<button id="n20_3">提示！</button>
+			var n20_2=document.getElementById('n20_2');
+			var n20_3=document.getElementById('n20_3');
+			n20_3.onclick=function()
+			{
+				n20_2.style.display="block";
+			}
+			n20_3.onmouseout=function()
+			{
+				n20_2.style.display="none";			
+			}
+
+			</script>
+
+
+
+			<h3>Note21</h3>
+			<div id="n21">
+				<p id="name21"></p>
+			</div>
+			<script>
+				var cre21=document.createElement("p");//创建新的 <p> 
+				var	no21=document.createTextNode("添加和删除节点（HTML 元素）。");//添加内容或文本
+				cre21.appendChild(no21);//向元素追加 东西
+
+				var element=document.getElementById("n21");
+					element.appendChild(cre21);
+
+					//element.removeChild(cre21); 删除元素
+
+					//把方式添 加到 对象
+				function person(firstname,age)
+				{
+					// this.firstname=firstname;
+					this.age=age;
+
+					this.changname=changname;
+					function changname(name)
+					{
+						this.firstname=name;
+					}
+				}
+				Myname=new person("Bill",18);
+				Myname.changname("tot");
+
+				var x=document.getElementById('name21');
+					x.innerHTML=Myname.firstname+" age is "+Myname.age;
+			</script>
+
+
+
+
+			<h3>Note22</h3>
+			<div id="div22">		 	
+			<ol>
+		 		<li>		 			
+		 		GetElementsByTagName 获取一组元素
+		 		</li>
+		 	</ol> 
+			</div>
+
+			<button type="button" class="bu_gb" id="n22">Change Li</button>
+			<script>
+			var n22=document.getElementById('n22');
+			n22.onclick=function()
+			{
+				//在div22 下选出 li
+				var div22=document.getElementById('div22');
+				//获取一组元素
+				var n22_1=div22.getElementsByTagName('li');
+
+				for (var i = 0; i <n22_1.length; i++) 
+				{
+					if (n22_1[i].style.color=='red')
+					 {
+					 n22_1[i].style.color='#5F5B5C';	
+					 }
+					else if (n22_1[i].style.color='#5F595B') 
+					 {
+					 	n22_1[i].style.color='red';
+					 };
+				};
+			};
+
+			</script>
+
+</body>
+</html>
