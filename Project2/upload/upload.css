@@ -1,0 +1,73 @@
+#fb_main{
+
+}
+
+#fb_box {
+
+}
+
+#fb_box span{
+	color: #E47979;
+} 
+
+#fb_box tr{
+	margin-bottom: 10px;
+}
+
+#fb_box tr th {
+	color:#585858;
+	font-weight: normal;
+	padding-right: 10px;
+	font-size: 15px;
+
+}
+#fb_box td {
+	padding:7px 0 7px 0;
+}
+
+#fb_box .txtstyle{
+	font-size: 14px;
+	height: 25px;
+	width: 200px;
+	border:1px solid;
+	border-color: #ccc #ccc #ccc #ccc;
+	padding:0px 5px 0px 5px;
+}
+
+#fb_box #txt_line{
+
+}
+
+/*简介*/
+#fb_box #txt_introduction{
+	resize: none;
+	height: 86px;
+	width: 350px;
+	padding:0px 5px 0px 5px;
+}
+/*工作地址*/
+#fb_box  #txt_city{
+	width: 90px;
+	height: 27px;
+}
+#fb_box  #txt_address {
+	width: 245px;
+	float: right;
+}
+/*工作时间*/
+#fb_box #txt_time{
+	width: 130px;
+}
+/*工资*/
+#fb_box #txt_wage {
+	width: 100px;
+}
+/*提交*/
+#fb_box #txt_tijiao {
+	height: 30px;
+	width: 100px;
+}
+/*联系方式*/
+#fb_box #txt_phone{
+	width: 130px;
+}

@@ -1,0 +1,21 @@
+#con {
+		border-top: 5px solid #777272;
+	    line-height: 28px;
+}
+#con dt {
+	float: left;
+	width: 80px;
+	color: #777272;
+	padding-left: 10px;
+}
+#con dd {
+
+}
+
+
+#con_inner{
+	border-top: 5px solid #777272;
+	padding-left: 10px;
+	line-height: 40px;
+
+}

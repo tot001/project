@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>发布</title>
+	<link rel="stylesheet" href="upload.css">
+	<link rel="stylesheet" href="index.css">
+	<script type="text/javascript" src="upload.js"></script>
+</head>
+<body>
+	<div id="header" class="auto">
+	<div id="logo">	
+		<img  src="logo.jpg">	
+	</div>
+
+	<div id="seracn">
+		<form action="">
+			<input type="submit" value="search" class="btn" >
+			<input type="search" class="keywork" name="user_search" placeholder="想找sm!!">
+		</form>
+	</div>
+	<a href="upload.html" id="fabu">发布信息</a>
+</div>
+	
+	<div id="fb_main" class="auto">
+		<table id="fb_box">
+				<form action="#" onsubmit="return check()">
+			<tr>
+			<th>
+				<span>
+				 <i>*</i>
+				</span>
+				标题&nbsp;&nbsp;&nbsp;&nbsp;
+				</th>
+				
+				<td>
+
+					<div class="txt_line">
+						<input type="text" id="txt_title" class="txtstyle">
+					</div>	
+				</td>
+			</tr>
+
+
+			<tr>
+			<th>
+				<span>
+				 <i>*</i>
+				</span>
+				工作简介
+				</th>
+				
+				<td>
+					<div class="txt_line">
+				<!-- <input type="text" id="txt_introduction" class="txtstyle"> -->
+				<textarea  name="txtCompIntro" id="txt_introduction" ></textarea>
+					</div>	
+				</td>
+			</tr>
+
+
+			<tr>
+			<th>
+				<span>
+				 <i>*</i>
+				</span>
+				工作地址
+				</th>
+				
+				<td>
+
+					<div class="txt_line">
+						<span  class="txt_cspan">
+						<select id="txt_city">
+							  <option value=""></option>
+							  <option value="石岐">石岐</option>
+							  <option value="东区">东区</option>
+							  <option value="西区">西区</option>
+							  <option value="五桂山">五桂山</option>
+							  <option value="火炬开发区">火炬开发区</option>
+							  <option value="黄埔">黄埔</option>
+							  <option value="南头">南头</option>
+							  <option value="东凤">东凤</option>
+							  <option value="阜沙">阜沙</option>
+							  <option value="小榄">小榄</option>
+							  <option value="东升">东升</option>
+							  <option value="古镇">古镇</option>
+							  <option value="横栏">横栏</option>
+							  <option value="三角">三角</option>
+							  <option value="民众">民众</option>
+							  <option value="南朗">南朗</option>
+							  <option value="港口">港口</option>
+							  <option value="大涌">大涌</option>
+							  <option value="三乡">三乡</option>
+							  <option value="板芙">板芙</option>
+							  <option value="神湾">神湾</option>
+							  <option value="坦洲">坦洲</option>
+						</select>
+						</span>
+						<input type="text" id="txt_address" class="txtstyle" placeholder="详细地址，如中关村南大街183号!"MaxLength="30"><!-- js限制 -->
+					</div>	
+				</td>
+			</tr>
+
+			<tr>
+			<th>
+				<span>
+				 <i>*</i>
+				</span>
+				工作时间
+				</th>
+				
+				<td>
+					<div class="txt_line">
+						<input type="text" id="txt_time" class="txtstyle" MaxLength="15">
+					</div>	
+				</td>
+			</tr>
+
+
+						
+			<tr>
+			<th>
+				<span>
+				 <i>*</i>
+				</span>
+				工资&nbsp;&nbsp;&nbsp;&nbsp; 
+				</th>
+				
+				<td>
+					<div class="txt_line">
+						<input type="text" id="txt_wage" class="txtstyle" MaxLength="10">
+						<input type="radio" id="day" name="unit" checked="checked" /><label for="day">DAY</label>  <input name="unit" id="hour" type="radio" /><label for="hour">HOUR</label>
+					</div>	
+				</td>
+			</tr>
+
+			<tr>
+			<th>
+				<span>
+				 <i>*</i>
+				</span>
+				 联系方式
+				</th>
+
+				<td>
+					<div class="txt_line">
+												
+						<input type="text" id="txt_phone" class="txtstyle" MaxLength="11" />
+					</div>	
+				</td>
+			</tr>
+
+			<tr>
+				<th>&nbsp;</th>
+			<td>
+
+				<input type="submit" value="免费发布"id="txt_tijiao">
+								
+			</td>
+			
+	
+			</tr>
+					</form>	
+		</table>
+	</div>
+</body>
+</html>

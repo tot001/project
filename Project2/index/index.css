@@ -1,0 +1,156 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family:'黑体';
+}
+html{
+	max-width: 480px;
+	margin: 0 auto;
+}
+a {
+		text-decoration: none;
+}
+.auto {
+	width: 480px;
+	height: auto;
+	margin: 0px auto;
+}
+
+/*header*/
+#header{
+	height: 80px;
+	box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+	margin-bottom: 25px;
+}
+/*#logo {
+	float: left;
+
+}*/
+/*#logo img {
+	width:70px;
+	height:70px;
+	margin-top: 10px;
+}*/
+
+
+#seracn   {
+	position: absolute;
+	color: #fff;
+	width: 25%;
+
+	/*	right: 40%;*/
+	/*	margin: 30px 30px 0px 20px;*/
+	/*	background: rgb(176, 224, 230);*/
+}
+#seracn form{
+	padding:30px 10px 10px 20px;
+	position: relative;
+	left: 30%;
+
+}
+ .keywork {
+	width: 55%;
+	height: 27px;
+	overflow: hidden;
+	border:1.5px solid #ccc;	/*rgb(207, 218, 220)*/
+	float:left ;
+
+}
+
+#seracn .btn {
+	height: 27px;
+    width: 50px;
+	background: rgb(176, 224, 230);     
+	border:1px solid rgb(176, 224, 230) ;/*rgb(146,203,216)*/
+	border-radius: 3px;
+	font-size: 15px;
+	color: #fff;
+	margin-left: 5px;
+}
+
+#fabu{
+	position: absolute;
+	right:35%;
+	margin-top: 30px;
+	border:1px solid #795548;
+	line-height: 27px;
+    font-size: 13px;
+    width: 65px;
+    height: 26px;
+    padding-left: 10px;
+    color: #fff;
+    background-color: #795548;
+}
+
+/*list*/
+#list{
+/*	border:1px solid #795548;*/
+	height: 112px;
+	box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+	margin-bottom: 5px;
+}
+
+#list dl {
+	padding: 10px 0;
+}
+#list dt {
+	float: left;
+	width: 50px;
+	font-size: 15px;
+	font-family: Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	float: left;
+	line-height: 30px;
+}
+#list dd {
+	margin-left: 20px;
+	font-size: 14px;
+	padding-bottom: 20px;
+}
+#list dd a {
+	margin-right: 14px;
+	white-space: nowrap;
+	display: inline-block;
+	color: #551AA8;
+}
+
+
+/*con*/
+#con {
+	box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+
+}
+#con .tb_one {
+	height: 80px;
+	margin-bottom: 5px;
+	padding-left: 10px;
+	border: #D5D7D6 solid;
+    border-width: 0 0  1px 0;
+    padding: 0.6rem 0.5rem;
+}
+#con .tb_h3{
+	padding: 5px 0 5px 0;
+}
+#con .tb_jq {
+	float: right;
+	padding-right: 5px;
+	color: #A00729;
+}
+#con .tb_dd{
+	font-size: 15px;
+	padding-bottom: 5px;
+}
+#con .tb_ti {
+	font-size: 15px;
+	padding-top: 5px;
+}
+/*页码*/
+.tb_page {
+	width: 480px;
+	float: left;
+	margin-top: 10px;
+    padding: 0.6rem 0.5rem;
+}
+.tb_page a:hover {
+
+}

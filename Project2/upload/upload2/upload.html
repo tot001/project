@@ -1,0 +1,173 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>发布</title>
+	<link rel="stylesheet" href="{% static "css/upload.css" %}">
+	<link rel="stylesheet" href="{% static "css/index.css" %}">
+</head>
+<body>
+	<div id="header" class="auto">
+	<div id="logo">	
+		<a href="/"><img  src="{% static "images/logo.jpg" %}"></a>
+	</div>
+
+	<div id="seracn">
+		<form action="">
+			<input type="submit" value="search" class="btn" >
+			<input type="search" class="keywork" name="user_search" placeholder="想找sm!!">
+		</form>
+	</div>
+	<a href="/upload" id="fabu">发布信息</a>
+</div>
+	
+	<div id="fb_main" class="auto">
+	<form method="post" action=".">
+	{% csrf_token %}  
+		<table id="fb_box">
+
+			<tr>
+			<th>
+				<span>
+				 <i>*</i>
+				</span>
+				职位&nbsp;&nbsp;&nbsp;&nbsp;
+				</th>
+				
+				<td>
+
+					<div class="txt_line">
+						{{ form.title }}
+					</div>	
+				</td>
+			</tr>
+
+
+			<tr>
+			<th>
+				<span>
+				 <i>*</i>
+				</span>
+				招聘人数
+				</th>
+				
+				<td>
+					<div class="txt_line">
+<!-- 				<input type="text" id="txt_introduction" class="txtstyle"> -->
+				{{form.zhao_ping}}
+					</div>	
+				</td>
+			</tr>
+
+
+			<tr>
+			<th>
+				<span>
+				 <i>*</i>
+				</span>
+				工资待遇
+				</th>
+				
+				<td>
+
+					<div class="txt_line">
+						<span  class="txt_cspan">
+						{{ form.jing_er }}
+						{{ form.day_hw}}
+						</span>
+					</div>	
+				</td>
+			</tr>
+			<tr>
+			<th>
+				<span>
+				 <i>*</i>
+				</span>
+				详细地址&nbsp;&nbsp;&nbsp;&nbsp; 
+				</th>
+				
+				<td>
+					<div class="txt_line">
+						 {{ form.di_zhi }}
+						 {{ form.area}}
+					</div>	
+				</td>
+			</tr>
+
+			<tr>
+			<th>
+				<span>
+				 <i>*</i>
+				</span>
+				结算方式&nbsp;&nbsp;&nbsp;&nbsp; 
+				</th>
+				
+				<td>
+					<div class="txt_line">
+						 {{ form.jie_suan }}
+					</div>	
+				</td>
+			</tr>
+
+			<tr>
+			<th>
+				<span>
+				 <i>*</i>
+				</span>
+				工作时间
+				</th>
+				
+				<td>
+					<div class="txt_line">
+					{{ form.shi_jian }}
+					{{ form.shi_jian2 }}
+					</div>	
+				</td>
+			</tr>
+
+
+						
+			<tr>
+			<th>
+				<span>
+				 <i>*</i>
+				</span>
+				联系方式&nbsp;&nbsp;&nbsp;&nbsp; 
+				</th>
+				
+				<td>
+					<div class="txt_line">
+						 {{ form.lxfs }}
+					</div>	
+				</td>
+			</tr>
+
+			<tr>
+			<th>
+				<span>
+				 <i>*</i>
+				</span>
+				工作简介
+				</th>
+				
+				<td>
+					<div class="txt_line">
+						{{ form.jian_jie }}
+					</div>	
+				</td>
+			</tr>
+
+			<tr>
+				<th>&nbsp;</th>
+			<td> 
+				<input type="submit" value="免费发布"id="txt_tijiao">
+				</form>				
+			</td>
+			
+				
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

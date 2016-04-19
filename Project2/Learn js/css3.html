@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3</title>
+    <style>
+    div {
+        width: 100px;
+        height:16px;
+        background-color: red;
+
+        position:relative;
+        
+        animation:myfirst 5s linear 2s infinite alternate ;
+
+/*      -webkit-animation-name:myfirst;
+        -webkit-animation-duration:5s;
+        -webkit-animation-timing-function:linear;
+        -webkit-animation-delay:2s;
+        -webkit-animation-iteration-count:infinite;
+        -webkit-animation-direction:alternate;
+        -webkit-animation-play-state:running;
+*/
+        transition:width 1s; /* =transition-property:width AND transition-duration:2s; */
+        -webkit-appearance:button;
+    }
+
+    @-webkit-keyframes myfirst /* Safari and Chrome */
+    {
+    0%   {background:red; left:0px; top:0px;}
+    25%  {background:yellow; left:200px; top:0px;}
+    50%  {background:blue; left:200px; top:200px;}
+    75%  {background:green; left:0px; top:200px;}
+    100% {background:red; left:0px; top:0px;}
+    }
+
+    div:hover {
+        width:300px;
+    }
+    </style>
+</head>
+<body>
+    <div></div>
+    
+</body>
+</html>

@@ -1,0 +1,44 @@
+<html>  
+  <head>  
+    <meta charset="UTF-8">
+    <style>
+    input{
+      border: 2px solid #000000;
+      margin-bottom: 10px;
+    }
+    </style>
+      <script type="text/javascript">  
+
+
+        function check(){  
+             var nameid=new Array("uname","uname2","uname3");
+             for (var i = 0; i < nameid.length; i++) 
+             {
+             var nameValue=window.document.getElementById(nameid[i]).value;  
+
+             if (nameValue=="") // 或者是!nameValue  
+            {               
+            window.document.getElementById(nameid[i]).style.border='2px solid #F44336';
+            return false;
+            } 
+            else if (nameValue!="")
+            {
+              window.document.getElementById(nameid[i]).style.border='2px solid #000000';
+              return true;
+            }
+            };
+
+
+                  
+        }  
+      </script>  
+  </head>  
+  <body>  
+    <form id="myform" method="post" action="#" onsubmit="return check()">  
+        用户名:<input type="text" id="uname"> <br> 
+        用户名:<input type="text" id="uname2">  <br>
+        用户名:<input type="text" id="uname3">  <br>
+        <input type="submit" value="提交" id="sub">  
+    </form>  
+  </body>  
+</html>  

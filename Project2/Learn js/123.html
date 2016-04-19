@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="imagetoolbar" content="no">
+  <meta name="viewport" content="width=device-width,inital-scale=1"/>
+  <title>Login</title>
+  <style type="text/css">
+body{
+  text-align: left;
+  background-color: F6F6F6;
+  background-attachment: fixed;
+}
+#imgcenter{
+  position:relative;
+  height: auto;
+  width:50%;
+  left:20%;
+  top:250px;
+}
+#center{
+  position:relative;
+  height: auto;
+  width:50%;
+  left:20%;
+  top:220px;
+}
+#account{
+  position:relative;
+  height: auto;
+  left:60%;
+  top:-110px;
+  padding:2%;
+  width:50%;
+}
+#pwd{
+  position:relative;
+  height: auto;
+  left:60%;
+  top:-100px;
+  padding:2%;
+  width: 50%;
+}
+#login{
+  position:relative;
+  height: auto;
+  left:60%;
+  top:-95px;
+  padding:1%;
+  width: 25%;
+}
+#logo{
+  padding:3%;
+  width: 50%;
+  height: auto;
+}
+#div_forgetpwd{
+  position:relative;
+  height: 30%;
+  left: 90%;
+  top:-115px;
+  width: 25%;
+  font-size: 1pt;   
+  white-space:nowrap;
+}
+#div_forgetpwd a{
+  text-decoration: none;
+  margin: auto;
+}
+#div_forgetpwd a:hover{
+  text-decoration: underline;
+  margin: auto;
+}
+.Clew{
+  position:relative;
+  height: 15px;
+  left:-10%;
+  top:-80%;
+  padding:2% 50%;
+  white-space:nowrap;
+  color: #FFFFD5;
+  font-weight: bold;
+  font-family: century gothic, arial;
+  background: #FCBE47;
+  border-top: 2px solid #db6e3c;
+  border-bottom: 2px solid #db6e3c;
+}
+</style>
+  <script type="text/javascript" src="E:\MyProject\html\KServer\jquery-1.4.2.min.js"></script>
+  <script type="text/javascript">
+//error clew
+var userFlag=0;
+var pwdFlag=0;
+$().ready(function() {
+  $("form :input").blur(function() {
+    var $parent = $(this).parent();
+    $parent.find(".clew").remove();
+    if($(this).is(".username")) {
+      if(this.value=="" || this.value.length < 0) {
+        var errorMsg = "Please enter your account.";
+        $parent.append("<span class='clew Clew'>"+errorMsg+"</span>");
+      }else
+    userFlag=1;
+    }
+    if($(this).is(".password")) {
+      if(this.value=="" || this.value.length < 0) {
+        var errorMsg = "Please enter your password.";
+        $parent.append("<span class='clew Clew'>"+errorMsg+"</span>");
+      }else
+    pwdFlag=1;
+    }	   
+  }).keyup(function() {
+    $(this).triggerHandler("blur");
+  }).focus(function() {
+    $(this).triggerHandler("blur");
+  });
+});
+//提交检验
+function validate_form(thisform){
+  with (thisform){
+    if (userFlag==0||pwdFlag==0){
+      username.focus();
+      return false;
+    }
+  }
+}
+</script>
+</head>
+<body bgcolor="#F6F6F6" >
+<!--
+<form  action="#" method="get" name="form" id="form">
+ 当前窗口高度：
+ <input type="text" name="availHeight" size="6">
+ <br>
+ 当前窗口宽度：
+ <input type="text" name="availWidth" size="6">
+ <br>
+ </form>
+-->
+  <div id="imgcenter">
+    <img src="" id="logo" align="left" ></div>
+  <div id="center">
+    <form method="post" action="db.html" onsubmit="return validate_form(this);">
+      <input type=text name="username" value="请输入用户名.." id="account"
+      class="username">
+      <br>
+      <input type=password name="password" value="" id="pwd" class="password">
+      <br>
+      <input type=submit value="登录" id="login">
+      <div id="div_forgetpwd">				
+        <a href="" >注册帐号</a>
+        <a href="" >忘记密码</a>
+      </div>
+    </form>
+  </div>
+  <script type="text/javascript">
+  //更改元素CSS属性
+  function set(){
+    var setImgDiv = document.getElementById("imgcenter");
+    setImgDiv.style.top = "150px";
+    setImgDiv.style.left = "36%";
+    var setTextDiv = document.getElementById("center");
+    setTextDiv.style.top = "280px";
+    setTextDiv.style.left = "8%";
+    var setLogo=document.getElementById("logo");
+    setLogo.style.height="100px";
+    setLogo.style.width="240px";
+    var setAccount=document.getElementById("account");
+    setAccount.style.height="15px";
+    setAccount.style.width="240px";
+    var setPwd=document.getElementById("pwd");
+    setPwd.style.height="15px";
+    setPwd.style.width="240px";
+    var setLogin=document.getElementById("login");
+    setLogin.style.height="25px";
+    setLogin.style.width="100px";
+    var setForgetPwd=document.getElementById("div_forgetpwd");
+    setForgetPwd.style.width="100px";
+    setForgetPwd.style.left="100%";
+  }
+  function reSet(){
+    var reSetImgDiv = document.getElementById("imgcenter");
+    reSetImgDiv.style.top = "250px";
+    reSetImgDiv.style.left = "20%";
+    var reSetTextDiv = document.getElementById("center");
+    reSetTextDiv.style.top = "220px";
+    reSetTextDiv.style.left = "20%";
+    var reSetLogo=document.getElementById("logo");
+    reSetLogo.style.height="auto";
+    reSetLogo.style.width="50%";
+    var reSetAccount=document.getElementById("account");
+    reSetAccount.style.height="auto";
+    reSetAccount.style.width="50%";
+    var reSetPwd=document.getElementById("pwd");
+    reSetPwd.style.height="auto";
+    reSetPwd.style.width="50%";
+    var reSetLogin=document.getElementById("login");
+    reSetLogin.style.height="auto";
+    reSetLogin.style.width="25%";
+    var reSetForgetPwd=document.getElementById("div_forgetpwd");
+    reSetForgetPwd.style.width="100px";
+    reSetForgetPwd.style.left="90%";
+  }
+  function setSizeMid(){
+    var setSizeMidImgDiv = document.getElementById("imgcenter");
+    setSizeMidImgDiv.style.top = "150px";
+    setSizeMidImgDiv.style.left = "22%";
+    var setSizeMidTextDiv = document.getElementById("center");
+    setSizeMidTextDiv.style.top = "280px";
+    setSizeMidTextDiv.style.left = "-35px";
+    var setSizeMidLogo=document.getElementById("logo");
+    setSizeMidLogo.style.height="100px";
+    setSizeMidLogo.style.width="240px";
+    var setSizeMidAccount=document.getElementById("account");
+    setSizeMidAccount.style.height="15px";
+    setSizeMidAccount.style.width="240px";
+    var setSizeMidPwd=document.getElementById("pwd");
+    setSizeMidPwd.style.height="15px";
+    setSizeMidPwd.style.width="240px";
+    var setSizeMidLogin=document.getElementById("login");
+    setSizeMidLogin.style.height="25px";
+    setSizeMidLogin.style.width="80px";
+    var setSizeMidForgetPwd=document.getElementById("div_forgetpwd");
+    setSizeMidForgetPwd.style.width="80px";
+    setSizeMidForgetPwd.style.left="110%";
+  }
+  function setSizeMini(){
+    var setSizeMiniImgDiv = document.getElementById("imgcenter");
+    setSizeMiniImgDiv.style.top = "150px";
+    setSizeMiniImgDiv.style.left = "6%";
+    var setSizeMiniTextDiv = document.getElementById("center");
+    setSizeMiniTextDiv.style.top = "280px";
+    setSizeMiniTextDiv.style.left = "-60px";
+    var setSizeMiniLogo=document.getElementById("logo");
+    setSizeMiniLogo.style.height="100px";
+    setSizeMiniLogo.style.width="240px";
+    var setSizeMiniAccount=document.getElementById("account");
+    setSizeMiniAccount.style.height="15px";
+    setSizeMiniAccount.style.width="240px";
+    var setSizeMiniPwd=document.getElementById("pwd");
+    setSizeMiniPwd.style.height="15px";
+    setSizeMiniPwd.style.width="240px";
+    var setSizeMiniLogin=document.getElementById("login");
+    setSizeMiniLogin.style.height="25px";
+    setSizeMiniLogin.style.width="80px";
+    var setSizeMiniForgetPwd=document.getElementById("div_forgetpwd");
+    setSizeMiniForgetPwd.style.width="80px";
+    setSizeMiniForgetPwd.style.left="125%";
+  }
+  //获取当前窗口尺寸
+   var winWidth = 0;
+   var winHeight = 0;
+   function findDimensions() //函数：获取尺寸
+   {
+    //获取窗口宽度
+    if (window.innerWidth)
+    winWidth = window.innerWidth;
+    else if ((document.body) && (document.body.clientWidth))
+    winWidth = document.body.clientWidth;
+    //获取窗口高度
+    if (window.innerHeight)
+    winHeight = window.innerHeight;
+    else if ((document.body) && (document.body.clientHeight))
+    winHeight = document.body.clientHeight;
+    //通过深入Document内部对body进行检测，获取窗口大小
+    if (document.documentElement  && document.documentElement.clientHeight && document.documentElement.clientWidth)
+    {
+    winHeight = document.documentElement.clientHeight;
+    winWidth = document.documentElement.clientWidth;
+  }
+  //结果输出至两个文本框
+  if(winWidth<420||winHeight<537)
+    setSizeMini();
+  else if(420<=winWidth&&winWidth<=595)
+    setSizeMid();
+  else if(595<winWidth&&winWidth<850||537<winHeight&&winHeight<590)
+    set();
+  else
+    reSet();
+  }	
+   findDimensions();
+   //调用函数，获取数值
+   window.onresize=findDimensions;
+ </script>
+</body>
+</html>
