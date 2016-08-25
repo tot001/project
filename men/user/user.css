@@ -1,0 +1,107 @@
+body {
+	background: rgba(0,0,0,0.04);
+}
+h2{
+	font-weight: 400;
+	color: #333;
+	font-family: "Hiragino Sans GB","Microsoft YaHei","黑体",Helvetica,Arial,Tahoma,sans-serif;
+}
+.icon-sloth:before {
+    content: url(../../images/sloth.ico);
+}
+.user-head{
+	background: #fff;
+	width: 100%;
+	height: 120px;
+}
+.user-photo{
+	margin-top: 20px;
+	margin-left: 10%;
+	width: 80%;
+	float: left;
+}
+.user-photo img{
+	max-width: 80px;
+	max-height: 80px;
+}
+.user-name{
+	float: right;
+	margin-top:20px;
+	margin-right: 10%;
+}
+/*photo-replace---------------------------------------------------*/
+.photo-replace{	
+	margin-top: 25px;
+	width: 100%;
+	background: #fff;
+}
+.photo-replace img{
+	border:1px solid;
+	width: 100px;
+	height: 100px;
+}
+.user-intro{
+    padding: 5% 10% 5% 10%;
+    word-wrap: break-word;
+    font-size:0.875rem;
+}
+.old-photos{
+	margin-left: 10%;
+}
+.new-photos{
+	float: right;
+	margin-right: 10%;
+}
+
+.user-photo-replace{
+	position: relative;
+}
+.arrow{
+	position: absolute;
+	top: 45%;
+	left: 47%;
+}
+.arrow img{
+	border:none;
+	width: 20px;
+	height: 20px;
+}
+
+/*user-food---------------------------------------------------------*/
+.user-food{
+	width: 100%;
+	background: #fff;
+	color: #333;
+	font-size: 0.95rem;
+	line-height: 20px;
+	padding: 5% 0 5% 10%;
+	margin-top: 15px;
+}
+.user-food p{
+	padding-top: 5px;
+}
+
+
+@media screen and (max-width: 320px){
+	.old-photos{
+		margin-left: 5%;
+	}
+	.new-photos{
+		float: right;
+		margin-right: 5%;
+	}
+	.user-intro{
+    	padding: 5% ;
+    	word-wrap: break-word;
+	}
+	.user-food{
+		padding: 5% 0 5% 5%;
+		margin-top: 15px;
+		width: 100%;
+		background: #fff;
+		color: #333;
+		font-size: 0.95rem;
+		line-height: 20px;
+		margin-top: 15px;
+	}
+}
