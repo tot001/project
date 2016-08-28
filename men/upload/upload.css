@@ -1,0 +1,78 @@
+.up-head img{
+	width: 100%;
+
+}
+
+.Atlas_title p{
+	padding-top: 10px;
+	font-size: 0.5rem;
+	text-align: center;
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.Atlas{
+	padding: 10px;
+}
+.Atlas img{
+	margin:0 2% 2% 0;
+}
+
+
+
+
+
+
+
+
+.btn_a{
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	border:1px solid #ccc;
+	border-radius: 4px;
+}
+
+#upload  {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	opacity: 0;
+	z-index: 10;
+}
+.plus:after{
+	position: absolute;
+	content: "";
+	opacity: 1;
+	width: 50%;
+	height: 5px;
+	top: 43%;
+	right: 25%;
+	border-radius: 2px;
+	background: #ccc;
+}
+.plus:before {
+	position: absolute;
+	content: "";
+	opacity: 1;
+	width: 5px;
+	height: 50%;
+	top: 23%;
+	right: 48%;
+	border-radius: 2px;
+	background: #ccc;
+}
+
+.up_food{
+	width: 100%;
+	margin-top: 100px;
+}
+.up_food p{
+	text-align: center;
+	width: 100%;
+	color:rgba(0, 0, 0, 0.5);
+}
+.up_food hr{
+	margin-left: 5%;
+	width: 90%;
+	color:rgba(0, 0, 0, 0.5);
+}	
