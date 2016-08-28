@@ -1,9 +1,16 @@
-	var getBlobURL=(window.URL&& URL.createObjectURL.bind(URL))||window.createObjectURL||(window.webkitURL&&webkitURL.revokeObjectURL.bind(webkitURL));
-	var revokeBlobURL=(window.URL&&URL.revokeObjectURL.bind(URL))||(window.webkitURL&&webkitURL.revokeObjectURL.bind(webkitURL))||window.revokeBlobURL;
+var getBlobURL=(window.URL&& URL.createObjectURL.bind(URL))||window.createObjectURL||(window.webkitURL&&webkitURL.revokeObjectURL.bind(webkitURL));
+var revokeBlobURL=(window.URL&&URL.revokeObjectURL.bind(URL))||(window.webkitURL&&webkitURL.revokeObjectURL.bind(webkitURL))||window.revokeBlobURL;
 
 window.onload=function () {
 		var upload=document.getElementById('upload');
 		var Atlas=document.getElementsByClassName('Atlas')[0];
+
+		$('.user_list>form>input').focus(function () {
+			$(this).addClass('holder');
+		});
+		$('.user_list>form>input').blur(function () {
+			$(this).removeClass('holder');
+		});
 
 		upload.onchange=function (e) {
 			
@@ -27,7 +34,7 @@ window.onload=function () {
 
 			if ($('.Atlas>img')) $('.btn_a').animate({opacity:0},0);
 			else $('.btn_a').animate({opacity:1},0);
-
 		};
+
 
 };
