@@ -184,7 +184,7 @@ input::-webkit-search-cancel-button {display: none;}
 #seracn .btn {
 	width: 15%;
 	height: 27px;
-	background: #44B78B;
+	background:url(../images/btn.png) center no-repeat #44B78B;
 	border: 0;
 	text-align: center;
 	position: absolute;
@@ -342,6 +342,6 @@ input::-webkit-search-cancel-button {display: none;}
 	   }
 	   .main{
 	   	width: 70%;
-	   	margin-right: 0 15% 0 15%;
+	   	margin: 0 15% 0 15%;
 	   }
 }

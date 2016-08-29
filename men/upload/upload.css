@@ -29,7 +29,7 @@
 }
 /*user_list--------------------------------------------*/
 .user_list{
-    width: 58%;
+    width: 60%;
     float: right;
 }
 .user_list input{
@@ -38,7 +38,7 @@
     -moz-appearance: none;
     appearance: none;
     outline: 0;
-    border: 1px solid rgba(255, 102, 102, 0.3);
+    border: 1px solid rgba(83, 227, 166, 0.3);
     background-color: rgba(0, 0, 0, .02);
     margin: 0 auto 10px auto;
 	padding:5px;
@@ -61,7 +61,14 @@
 } 
 
 .user_list select{
+	display: block;
+	width: 120px;
     margin: 0 auto 10px auto;
+    padding: 5px;
+    border-radius: 3px;
+    color: #44b78b;
+    border: 1px solid rgba(0, 0, 0, .02);
+    background-color: rgba(83, 227, 166, .06);
 }
 
 /*upload------------------------------------------------------------*/
@@ -112,3 +119,19 @@
 }	
 
 
+
+
+@media screen and (max-width: 360px){
+
+}
+@media screen and (min-width: 370px) and (max-width: 440px){
+
+}
+@media screen and (max-width: 845px) and (min-width: 740px){
+	.btn_a {
+    left: 26%;
+ 	}
+ 	.Atlas img {
+ 	margin-left: 15%;
+	}
+}
