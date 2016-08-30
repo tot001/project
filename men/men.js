@@ -22,6 +22,10 @@ window.onload=function(){
 	
 	var bx_top=($('.slide').first().height()-10)+'px';
 	$('.bx-pager').css('top',bx_top);
+
+
+		
+
 };
 
 
@@ -30,8 +34,13 @@ $(window).bind("load", function() {
 	setCookie('one',1,9999);
 	var one=parseInt(GetCookie('one'));
 	if (one===1) {
-		$('.icon-llama').addClass('icon');
-		$('.icon-llama').removeClass('icon-llama');
+		$('.home_img').fadeOut(3500,function () {
+			$('body').scrollTop(0);
+		})
+	}else{
+		$('.home_img').on('tap',function () {
+			$(this).hide();
+		})
 	}
 
 

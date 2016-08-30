@@ -12,7 +12,8 @@
 }
 /*Atlas------------------------------------------------------------*/
 .Atlas{
-	padding: 10px;
+	padding: 20px;
+	padding-left: 10%;
 	height: 110px;
 }
 .Atlas img{
@@ -122,7 +123,9 @@
 
 
 @media screen and (max-width: 360px){
-
+	.Atlas{
+		padding-left: 25px;
+	}
 }
 @media screen and (min-width: 370px) and (max-width: 440px){
 
