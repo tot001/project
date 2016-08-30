@@ -1,6 +1,20 @@
 window.onload=function(){
 	new TabSwitch('tab');
 
+	$('.home_img').click(function () {
+		$(this).fadeOut(2200);
+		setCookie('one','display',1);
+	});
+	var home_img=document.createElement('img');
+	home_img.src="../images/home_img.jpg";
+	$('.home_img').append(home_img);
+
+	var one=GetCookie('one');
+	if (one=="display") $('.home_img').remove();
+
+
+
+
 	$(function() {
  	   $("img.lazy").lazyload({
   	      event : "sporty",
@@ -29,20 +43,8 @@ window.onload=function(){
 };
 
 
+
 $(window).bind("load", function() {
-
-	setCookie('one',1,9999);
-	var one=parseInt(GetCookie('one'));
-	if (one===1) {
-		$('.home_img').fadeOut(3500,function () {
-			$('body').scrollTop(0);
-		})
-	}else{
-		$('.home_img').on('tap',function () {
-			$(this).hide();
-		})
-	}
-
 
 	$('.flatbtn , #lean_overlay').click(function(){
 		$('#lean_overlay').toggle();
